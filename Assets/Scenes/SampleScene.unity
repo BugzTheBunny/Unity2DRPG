@@ -189,6 +189,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1874520458858109346, guid: 7fd5e0029b53cf84db3e9415120dc663, type: 3}
   m_PrefabInstance: {fileID: 233602534}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &342170928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342170929}
+  m_Layer: 0
+  m_Name: SlashAnimationSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &342170929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342170928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.57, y: 0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1240362278}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &493377975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1874520458858109346, guid: 7fd5e0029b53cf84db3e9415120dc663, type: 3}
@@ -675,6 +706,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1530137369}
+  - {fileID: 342170929}
   m_Father: {fileID: 1904504815}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -902,7 +934,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530137368}
   m_LocalRotation: {x: -0, y: -0, z: -0.87937456, w: -0.47613063}
-  m_LocalPosition: {x: 0.428, y: 0.923, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -994,6 +1026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fbe807c2bdfd304c84cebfd6012f0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slashAnimationPrefab: {fileID: 4635113179831901105, guid: dd4191e17fb3e7c4ea04f545ba77b037, type: 3}
+  slashAnimSpawnPoint: {fileID: 342170929}
 --- !u!1 &1803917979
 GameObject:
   m_ObjectHideFlags: 0
