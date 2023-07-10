@@ -97,7 +97,10 @@ GameObject:
   - component: {fileID: 4689293429116219108}
   - component: {fileID: 3329684624572563552}
   - component: {fileID: 6998463920748814555}
+  - component: {fileID: 1781092484173833728}
   - component: {fileID: 7495533411445095267}
+  - component: {fileID: 814482643887995705}
+  - component: {fileID: 7049845146727843408}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -119,7 +122,7 @@ Transform:
   m_Children:
   - {fileID: 3345721565081871566}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5587106705450335818
 SpriteRenderer:
@@ -247,6 +250,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed4c53696f74da488dac7c709881398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1781092484173833728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244042165859408152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2351cbf79dbb09147afe85696871c883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackTime: 0.1
 --- !u!114 &7495533411445095267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,3 +276,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+--- !u!114 &814482643887995705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244042165859408152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a7b49991abe2c46a5c223da18815aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHleath: 3
+  deathVFXPrefab: {fileID: 8852027419702859580, guid: 106b4843481b51542be3268ee9ee03c9, type: 3}
+--- !u!114 &7049845146727843408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244042165859408152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 916ea79534d80bb4d8906e2538991bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteFlashMaterial: {fileID: 2100000, guid: 1cd49f339595b30479b575f4414bad72, type: 2}
+  restoreDefaultMaterialTime: 0.2
