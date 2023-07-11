@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
 
     public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
-    public static PlayerController Instance;
 
     [Header("- Movement")]
     [SerializeField] private float moveSpeed = 4.0f;
@@ -25,9 +24,10 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     private float baseMoveSpeed;
 
-    private void Awake()
+    protected override void Awake()
     {
-        Instance = this;
+        base.Awake();
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
