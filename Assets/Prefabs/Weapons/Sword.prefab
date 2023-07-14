@@ -123,3 +123,4 @@ MonoBehaviour:
   slashAnimSpawnPoint: {fileID: 0}
   weaponCollider: {fileID: 0}
   attackCD: 0.5
+  weaponInfo: {fileID: 11400000, guid: 74ffd02c57116d74fbcf62cd1316ae65, type: 2}
