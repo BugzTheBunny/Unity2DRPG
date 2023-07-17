@@ -275,7 +275,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &7620381340202046025
 MonoBehaviour:
@@ -290,6 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 22
+  particlePrefabVFX: {fileID: 8852027419702859580, guid: 155e5e8403959e24a8748d3d451b63f8, type: 3}
 --- !u!114 &8007820950181433017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,4 +303,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034f7dbdd330e924889445e4df79f47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
