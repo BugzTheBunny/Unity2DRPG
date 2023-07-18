@@ -39,7 +39,6 @@ public class Projectile : MonoBehaviour
     {
         EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
         Indestructible indestructible = collision.gameObject.GetComponent<Indestructible>();
-
         if (!collision.isTrigger &&  (enemyHealth || indestructible))
         {
             Instantiate(particlePrefabVFX, transform.position, transform.rotation);

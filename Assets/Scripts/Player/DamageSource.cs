@@ -14,6 +14,7 @@ public class DamageSource : MonoBehaviour
     {
         EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
         enemyHealth?.TakeDamage(damageAmount);
+        Debug.Log(collision.name);
     }
 
 }
