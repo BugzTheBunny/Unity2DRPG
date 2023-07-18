@@ -101,6 +101,9 @@ GameObject:
   - component: {fileID: 7495533411445095267}
   - component: {fileID: 814482643887995705}
   - component: {fileID: 7049845146727843408}
+  - component: {fileID: 1767437791308515631}
+  - component: {fileID: 4675333146350320351}
+  - component: {fileID: 456913055418910107}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -250,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed4c53696f74da488dac7c709881398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamingDirectionChangeTime: 2
 --- !u!114 &1781092484173833728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,8 +292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a7b49991abe2c46a5c223da18815aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHleath: 3
+  startingHealth: 3
   deathVFXPrefab: {fileID: 8852027419702859580, guid: 106b4843481b51542be3268ee9ee03c9, type: 3}
+  knockBackThrust: 15
 --- !u!114 &7049845146727843408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,3 +309,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMaterial: {fileID: 2100000, guid: 1cd49f339595b30479b575f4414bad72, type: 2}
   restoreDefaultMaterialTime: 0.2
+--- !u!95 &1767437791308515631
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244042165859408152}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09a7d32a84f80934b9ee0865d395ca33, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4675333146350320351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244042165859408152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb84aa7717423ae4a83f1c28818c233d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!210 &456913055418910107
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244042165859408152}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

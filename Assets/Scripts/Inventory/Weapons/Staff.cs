@@ -10,7 +10,7 @@ public class Staff : MonoBehaviour, IWeapon
 
     private Animator animator;
 
-    readonly int AttackHash = Animator.StringToHash("Attack");
+    readonly int ATTACH_HASH = Animator.StringToHash("Attack");
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class Staff : MonoBehaviour, IWeapon
     }
     public void Attack()
     {
-        animator.SetTrigger(AttackHash);
+        animator.SetTrigger(ATTACH_HASH);
     }
 
     public void SpawnStaffProjectileAnimEvent()
