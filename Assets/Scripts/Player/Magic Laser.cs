@@ -9,10 +9,12 @@ public class MagicLaser : MonoBehaviour
 
     private float laserRange;
     private SpriteRenderer spriteRenderer;
+    private CapsuleCollider2D capsuleCollider;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     private void Start()
@@ -34,10 +36,16 @@ public class MagicLaser : MonoBehaviour
             timePassed += Time.deltaTime;
             float linearT = timePassed / laserGrowTime;
 
+            // sprite resize
             spriteRenderer.size = new Vector2(Mathf.Lerp(1f,laserRange,linearT),1f);
 
+            // collider resize
+            capsuleCollider.size = new Vector2(Mathf.Lerp(1f, laserRange, linearT),capsuleCollider.size.y);
+            capsuleCollider.offset = new Vector2((Mathf.Lerp(1f, laserRange, linearT)) / 2, capsuleCollider.offset.y);
             yield return null;
         }
+
+        StartCoroutine(GetComponent<SpriteFade>().SlowFadeRoutine());
     }
 
     private void LaserFaceMouse()
