@@ -27,6 +27,11 @@ public class Projectile : MonoBehaviour
         this.projectileRange = projectileRange;
     }
 
+    public void UpdateMoveSpeed(float moveSpeed)
+    {
+        this.moveSpeed = moveSpeed;
+    }
+
     private void MoveProjectile()
     {
         transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
@@ -49,13 +54,17 @@ public class Projectile : MonoBehaviour
         if (!collision.isTrigger &&  (enemyHealth || indestructible || player))
         {
 
-            if (player && IsEnemyProjectile)
+            if ((player && IsEnemyProjectile) ||(enemyHealth && !IsEnemyProjectile))
             {
-                player.TakeDamage(1,transform);
+                player?.TakeDamage(1,transform);
+                Instantiate(particlePrefabVFX, transform.position, transform.rotation);
+                Destroy(gameObject);
+            } else if (!collision.isTrigger && indestructible) {
+                Instantiate(particlePrefabVFX, transform.position, transform.rotation);
+                Destroy(gameObject);
             }
 
-            Instantiate(particlePrefabVFX, transform.position, transform.rotation);
-            Destroy(gameObject);
+
         }
 
 

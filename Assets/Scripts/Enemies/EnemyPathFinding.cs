@@ -40,4 +40,9 @@ public class EnemyPathFinding : MonoBehaviour
         moveDirection = pos;
     }
 
+    public void StopMoving()
+    {
+        moveDirection = Vector2.zero;
+    }
+
 }
