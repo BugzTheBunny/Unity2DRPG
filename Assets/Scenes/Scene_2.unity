@@ -54106,9 +54106,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1440469860047330694, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
-      propertyPath: enemyType
-      value: 
-      objectReference: {fileID: 7839302692745685976}
+      propertyPath: attackRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440469860047330694, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
+      propertyPath: attackCooldownTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428699179515209910, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
+      propertyPath: restTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428699179515209910, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
+      propertyPath: burstCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428699179515209910, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
+      propertyPath: angleSpread
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428699179515209910, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
+      propertyPath: bulletMoveSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428699179515209910, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
+      propertyPath: timeBetweenBurts
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428699179515209910, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
+      propertyPath: projectilesPerBurst
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6117935211190353274, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
       propertyPath: m_Name
       value: Ghost
@@ -54118,14 +54146,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
---- !u!114 &7839302692745685976 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5428699179515209910, guid: d4179fac0619e914aa4a290139de5aca, type: 3}
-  m_PrefabInstance: {fileID: 4025470810397638406}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b76975fff968cd4893c0ddbfa9b4bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
