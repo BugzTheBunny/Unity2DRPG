@@ -18,6 +18,18 @@ public class Shooter : MonoBehaviour, IEnemy
     [SerializeField] private bool oscillate;
 
     private bool isShooting = false;
+
+    private void OnValidate()
+    {
+        if (oscillate) { stagger = true; }
+        if (!oscillate) { stagger = false; }
+        if (projectilesPerBurst < 1) { projectilesPerBurst = 1;}
+        if (burstCount< 1) { burstCount = 1; }
+        if (timeBetweenBurts < 0.1f) { timeBetweenBurts = 0.1f; }
+
+
+    }
+
     public void Attack()
     {
         if (!isShooting) {
@@ -44,7 +56,12 @@ public class Shooter : MonoBehaviour, IEnemy
             if (!oscillate) {
             TargetConeOfInfluence(out startAngle, out currentAngle, out angleStep, out endAngle);
 
-            } else
+            } 
+            
+            if (oscillate && i % 2 != 1)
+            {
+                TargetConeOfInfluence(out startAngle, out currentAngle, out angleStep, out endAngle);
+            } else if (oscillate)
             {
                 currentAngle = endAngle;
                 endAngle = startAngle;
@@ -74,7 +91,8 @@ public class Shooter : MonoBehaviour, IEnemy
             }
             currentAngle = startAngle;
 
-            yield return new WaitForSeconds(timeBetweenBurts);
+            if (!stagger) { yield return new WaitForSeconds(timeBetweenBurts); }
+                
         }
 
         yield return new WaitForSeconds(restTime);
