@@ -357,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246431217781905572, guid: b8a5a6db90cc17d4091bc9a9fae44a22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 246431217781905572, guid: b8a5a6db90cc17d4091bc9a9fae44a22, type: 3}
       propertyPath: m_LocalPosition.z
@@ -399,13 +399,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.000000037252903
       objectReference: {fileID: 0}
+    - target: {fileID: 4185142722216252770, guid: b8a5a6db90cc17d4091bc9a9fae44a22, type: 3}
+      propertyPath: m_RenderAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4608715973080077040, guid: b8a5a6db90cc17d4091bc9a9fae44a22, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4608715973080077040, guid: b8a5a6db90cc17d4091bc9a9fae44a22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 6289443242448864848, guid: b8a5a6db90cc17d4091bc9a9fae44a22, type: 3}
       propertyPath: TransitionName
