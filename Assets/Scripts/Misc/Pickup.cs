@@ -32,9 +32,7 @@ public class Pickup : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Spawn!");
         StartCoroutine(AnimCurveSpawnRoutine());
-        Debug.Log("Spawn!");
     }
 
     private void Update()
