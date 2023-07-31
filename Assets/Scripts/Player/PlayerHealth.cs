@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : Singleton<PlayerHealth>
 {
 
-    public bool isDead {  get; private set; }
+    public bool IsDead {  get; private set; }
 
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float knockbackThrust = 3.0f;
@@ -33,7 +33,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
     private void Start()
     {
-        isDead = false;
+        IsDead = false;
         canTakeDamage = true;
         currentHealth = maxHealth;
         UpdateHealthSlider();
@@ -76,9 +76,10 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
     private void CheckIfPlayerDeath()
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !IsDead)
         {
-            isDead = true;
+            IsDead = true;
+            Destroy(ActiveWeapon.Instance.gameObject);
             currentHealth = 0;
             GetComponent<Animator>().SetTrigger(DEATH_HASH);
             StartCoroutine(DeathLoadSceneRoutine());
@@ -89,6 +90,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
+        Stamina.Instance.ReplenishStaminaOnDeath();
         SceneManager.LoadScene(TOWN_SCENE_NAME);
     }
 

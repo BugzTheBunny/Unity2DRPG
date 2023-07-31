@@ -21,6 +21,12 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
     {
         playerControls.Enable();
     }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
+    }
+
     private void Start()
     {
         // Type of subscription to a mouse click event.
